@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="registrationForm" id="registrationForm">
+        <input type="text" name="userName" placeholder="Введите имя" required>
+        <div id="errorName"></div>
+        <input type="email" name="userEmail" placeholder="Введите электронный адрес" required>
+        <div id="errorEmail"></div>
+        <input type="number" name="uesrAge" placeholder="Введите возраст" required>
+        <label><input type="radio" name="userGender" value="Мужчина">Мужчина</label>
+        <label><input type="radio" name="userGender" value="Женщина">Женщина</label>
+        <label>Выберите профессию
+            <select name="userJob" required>
+                <option value="">--</option>
+                <option value="doctor">Врач</option>
+                <option value="IT">Программист</option>
+                <option value="tutor">Учитель</option>
+                <option value="UX">Дизайнер</option>
+                <option value="engineer">Инженер</option>
+                <option value="sales">Продавец</option>
+                <option value="etc">Другое</option>
+            </select></label>
+        <input type="password" name="userPassword" placeholder="Введите пароль" minlength="8" pattern="" required>
+        <div id="errorPassword"></div>
+        <label><input type="checkbox" name="userAgree" required> Согласен с условиями обработки персональных
+            данных</label>
+        <div id="errorUserAgree"></div>
+        <button type="submit" id="buttonSubmit" onclick="submitRegistrationForm(event)">Отправить</button>
+
+
+    </form>
+    <script src="index.js"></script>
+
+
+
+</body>
+
+</html>
